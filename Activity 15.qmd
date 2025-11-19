@@ -202,3 +202,8 @@ ggplot()+
 ## What I've Learned So Far
 
 In this class I learned how to be proficient in R. I now have strong skills in using it for statistical analysis. Writing basic R code as well as importing datasets and creating visualizations are all things that I am now able to do because of this class. Throughout the class I was able to practice writing code and using basic concepts to complete certain tasks. Having experience with R and certain data types is very helpful for my future. This course strengthened my programming skills and my ability to analyze data.
+
+## Code Appendix
+
+```{r codeAppend, ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE}
+```
