@@ -147,3 +147,29 @@ Frequency_data %>%
 
 ```
 @fig-military-frequency Displays a table that shows each sex in a specific rank, while accounting fro every officer in the Navy.
+## Popularity of Baby Names
+
+``` {r}
+#| label: fig-babynames-graph
+#| fig-cap: "Plot of Baby Names Popularity Over Time"
+#| fig-alt: "Line graph that shows the popularity of four names from 1880 onward."
+#Baby Names Code
+library(babynames)
+library(dplyr)
+library(ggplot2)
+
+Baby_Name <- babynames %>%
+  filter(name %in% c("Brady", "Mark", "Frank", "Steve"),
+         sex == "M")
+
+ggplot(Baby_Name) +
+  aes(x = year, y = n, colour = name, linetype = name) +
+  geom_line(size = 1) +
+  labs(
+    x = "YEAR",
+    y = "COUNT",
+    title = "Popularity of Various Male Baby Names Over Time"
+  ) +
+  theme_minimal()
+```
+@fig-babynames-graph Displays a line chart representing four names. The x axis is the year while the y axis is the amount of babies named.
