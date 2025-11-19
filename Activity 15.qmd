@@ -1,1 +1,14 @@
-
+---
+title: "Activity 14"
+subtitle: "Data Visualizations from Stat 184"
+author: "Brady Kelly"
+date: "Nov. 13, 2025"
+date-modified: today
+format:
+  pdf:
+    link-external-newwindow: false
+execute:
+  echo: false
+  warning: false
+csl: "https://www.zotero.org/styles/apa"
+---
