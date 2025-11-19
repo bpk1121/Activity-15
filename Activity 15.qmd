@@ -173,3 +173,28 @@ ggplot(Baby_Name) +
   theme_minimal()
 ```
 @fig-babynames-graph Displays a line chart representing four names. The x axis is the year while the y axis is the amount of babies named.
+## Box Volume Function With Graph
+
+``` {r}
+#| label: fig-boxvolume-graph
+#| fig-cap: "Plot of Volume vs Height"
+#| fig-alt: "Line graph that shows volume of a box over various heights from 0 to 20"
+# Box Problem Code
+V <- function(height, width, length){
+  (length-2*height)*(width-2*height)*height
+}
+
+library(ggplot2)
+ggplot()+
+  stat_function(
+    fun = V,
+    args = list(length = 36, width = 48),
+    xlim = c(0, 20)
+  ) +
+  labs(
+    x = "Height (in)",
+    y = "Volume (in cubed)"
+  ) +
+  theme_minimal()
+```
+@fig-boxvolume-graph Displays volume of a box over heights from 0 to 20. Using a function I created to find the maximum dimensions of a box. 
